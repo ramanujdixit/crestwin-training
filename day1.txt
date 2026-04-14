@@ -1,0 +1,42 @@
+Linux Fundamentals:
+what is Linux?
+advantages of Linux?
+Linux Distros
+Architecture of Linux
+
+Linux file system
+architecture of file system
+characteristics of file system
+types of file system
+
+
+Commands:
+pwd
+ls
+cd
+mkdir
+rmdir
+cp
+mv
+cat
+head
+tail
+stat
+ps
+grep
+cut
+paste
+sort 
+diff
+diff3
+find
+uptime
+date
+wget
+whoami
+whereis
+man
+
+Linux permissions:
+commands
+modes
