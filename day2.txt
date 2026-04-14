@@ -1,0 +1,11 @@
+Git fundamentals
+init, clone, add, commit, push, pull · Branching: checkout -b,
+merge · Day-N branch convention · .gitignore
+
+GitHub PR workflow
+Fork vs clone · Raise PR to main · PR description best practices
+· Code review basics
+
+Shell basics
+Bash scripts, shebang, chmod +x · Env variables, export · Piping
+& redirection
