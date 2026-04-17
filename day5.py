@@ -55,14 +55,14 @@
 # unlike class attributes, instance attributes are not shared by objects, instead each objects have there own attributes.
 
 
-# Inheritance 
+# Inheritance
 # class Animal():
 #     def __init__(self,name):
 #         self.name=name
 
 #     def info(self):
 #         return F"Animal name: {self.name}"
-    
+
 # class Cat(Animal):
 #     def speak(self):
 #         return F"{self.name} meows"
@@ -76,7 +76,7 @@
 # class Person:
 #     def __init__(self, name):
 #         self.name=name
-    
+
 #     def give_name(self):
 #         return F"my name is {self.name}"
 
@@ -84,7 +84,7 @@
 #     def __init__(self, name, salary):
 #         super().__init__(name)
 #         self.salary=salary
-    
+
 #     def info(self):
 #         return f"Name: {self.name}, Salary:{self.salary}"
 
@@ -96,7 +96,7 @@
 # class Grandfather:
 #     def __init__(self, grandfathername):
 #         self.grandfathername=grandfathername
-    
+
 # class Father(Grandfather):
 #     def __init__(self, grandfathername, fathername):
 #         super().__init__(grandfathername)
@@ -123,14 +123,13 @@
 # class Daughter(Father):
 #     def always(self):
 #         print("Father always listens to her")
-    
+
 # r=Son()
 # k=Daughter()
 # r.advise()
 # r.sometime()
 # k.advise()
 # k.always()
-
 
 
 # class Simple:
@@ -140,14 +139,12 @@
 # class Two:
 #     def __init__(self, name):
 #         self.name=name
-    
+
 #     def print_name(self):
 #         return f"My name is {self.name}"
-    
+
 # obj=Two('Kishore')
-# print(obj.print_name())    
-
-
+# print(obj.print_name())
 
 
 # encapsulation
@@ -155,20 +152,20 @@
 #     def __init__(self, amount, balance):
 #         self.amount=amount
 #         self.__balance=balance
-    
+
 #     def withdraw(self):
 #         if self.amount<self.__balance:
 #             self.__balance-=self.amount
 #             return f'{self.amount} is withdrawn successfuly'
 #         return f'Insufficient funds'
-        
+
 #     def deposit(self):
 #         self.__balance+=self.amount
 #         return f'{self.amount} is deposited successfuly'
-    
+
 #     def get_balance(self):
 #         return f'Balance:{self.__balance}'
-    
+
 # a=Bank(5000,15000)
 
 # print(a.deposit())
@@ -178,20 +175,20 @@
 # class Magic:
 #     def __init__(self,marks):
 #         self.marks=marks
-    
+
 #     def __eq__(self, other):
 #        return self.marks==other.marks
-    
+
 #     # def __str__(self):
 #     #     return 'Nice Output'
-    
-    
+
+
 #     def __add__(self, other):
 #         return self.marks+other.marks
-    
+
 #     def __repr__(self):
 #         return 'Magic'
-    
+
 # s1=Magic(85)
 # s2=Magic(85)
 # print(s1==s2)
@@ -200,13 +197,12 @@
 # print(s2)
 
 
-
 # class method      - factory method
 # from datetime import date
 # class Age:
 #     def __init__(self, age):
 #         self.age=age
-    
+
 #     @classmethod
 #     def display_age(cls, year):
 #         age=date.today().year-year
@@ -214,4 +210,3 @@
 
 # a=Age.display_age(2000)
 # print(a.age)
-
