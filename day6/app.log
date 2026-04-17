@@ -1,0 +1,5 @@
+2026-04-17 13:13:47,590:DEBUG:root:this is debug:2184:92
+2026-04-17 13:13:47,590:INFO:root:this is info:2184:93
+2026-04-17 13:13:47,590:WARNING:root:this is warning:2184:94
+2026-04-17 13:13:47,590:ERROR:root:this is error:2184:95
+2026-04-17 13:13:47,590:CRITICAL:root:this is critical:2184:96

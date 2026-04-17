@@ -5,11 +5,11 @@
 # if elif else
 
 # looping statements:
-# for 
+# for
 # while
 
 # jumping statements
-# continue 
+# continue
 # break
 # return
 
@@ -30,7 +30,6 @@
 #     print(numbers)
 
 # **kwargs:
-
 
 
 # scope in python:
@@ -84,11 +83,6 @@
 # os is procedural type and pathlib is object oriented type.
 
 
-
-
-
-
-
 # prime number for loop and controlling statement
 # num=int(input('enter any number:'))
 
@@ -116,7 +110,7 @@
 #     rem=num%10
 #     rev_num=rev_num*10+rem
 #     num=num//10
-    
+
 # print(rev_num)
 
 # def information(name='Varun', salary=2000):
@@ -142,17 +136,17 @@
 
 # def outer():
 #     a='raj'
-    
+
 #     def inner():
 #         print(a)      it will be printed as outer scope variable is accessed in inner function
-        
+
 #     inner()
 # outer()
 
 
 # def outer():
-    # print(a)    it will not printed as its in inner function variable and we are trying to access it in outer function
-    
+# print(a)    it will not printed as its in inner function variable and we are trying to access it in outer function
+
 #     def inner():
 #         a='raj'
 #         print(a)     this will get executed
