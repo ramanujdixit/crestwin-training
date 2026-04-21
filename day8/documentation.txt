@@ -1,0 +1,50 @@
+Task Manager API Documentation:
+
+1. Home Endpoint
+ GET /
+
+Description:
+Returns welcome message for the API.
+
+2. Create Task
+ POST /create
+
+Description:
+Creates a new task and stores it in JSON file.
+
+Field Explanation:
+
+title → Name of task
+description → Task details
+status →
+false = not completed
+true = completed
+
+
+3. Get All Tasks
+ GET /tasks
+
+Description:
+Fetches all tasks from storage.
+
+
+4. Delete Task
+ DELETE /tasks/{id}
+
+Description:
+Deletes a task by ID.
+
+Path Parameter:
+
+id → Task ID
+
+
+5. Update Task
+ PUT /tasks/{id}
+
+Description:
+Updates an existing task.
+
+Path Parameter:
+
+id → Task ID
