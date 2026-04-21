@@ -1,0 +1,130 @@
+API Endpoints
+1. Home
+Endpoint: /
+Method: GET
+Description: Check if API is running
+
+Response:
+
+{
+  "message": "Welcome to Login Page"
+}
+
+2. Signup (Register User)
+Endpoint: /signup
+Method: POST
+Description: Register a new user
+
+Request Body:
+
+{
+  "email": "string",
+  "password": "string"
+}
+
+Responses:
+
+Success (201)
+
+{
+  "message": "user registered successfully"
+}
+
+Error (400)
+
+{
+  "detail": "User already exists. Please login"
+}
+
+3. Login
+Endpoint: /login
+Method: POST
+Description: Authenticate user
+
+Request Body:
+
+{
+  "email": "string",
+  "password": "string"
+}
+
+Responses:
+
+Success (200)
+
+{
+  "message": "Login Successful"
+}
+
+Error (401)
+
+{
+  "detail": "Bad Credentials"
+}
+
+
+4. Update User
+Endpoint: /update_password/{email}
+Method: PUT
+Description: Update user email and password
+
+Path Parameter:
+
+email: Existing user email
+
+Request Body:
+
+{
+  "email": "string",
+  "password": "string"
+}
+
+Responses:
+
+Success (200)
+
+{
+  "message": "User Updated"
+}
+
+Error (404)
+
+{
+  "detail": "user not found"
+}
+
+
+5. Delete User
+Endpoint: /delete/{email}
+Method: DELETE
+Description: Delete a user
+
+Path Parameter:
+
+email: User email
+
+Responses:
+
+Success (200)
+
+{
+  "message": "user deleted",
+  "user": {
+    "email": "user@gmail.com",
+    "password": "1234"
+  }
+}
+
+Error (404)
+
+{
+  "detail": "user not found"
+}
+
+
+This project demonstrates:
+
+REST API development using FastAPI
+CRUD operations
+Basic authentication logic
+File handling using JSON
