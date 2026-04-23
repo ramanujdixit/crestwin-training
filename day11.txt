@@ -1,0 +1,57 @@
+FastAPI?
+FastAPI is a modern, high performance web framework for building APIs with python.
+
+Project Structure:
+project structure is a way of organizing our project file in a systematic way.
+like there are different folder and files organized in proper way.
+
+Uvicorn:
+fastapi does not have an any server its uvicorn which supports ASGI server for fastapi.like if we have fastapi code then its of no use if we dont use uvicorn.
+
+CORS:
+cross origin resource sharing this means that the origin should be the same of bith front end and backend otherwise brower will not allow us to ge response back, its basically a browser security mechanism, browser enforces it.
+
+
+Routing:
+mapping url + http methods +function.
+
+
+http methods:
+1. get: it is used to retrieve information.
+2. post: it is used to send data.
+3. put: it is used to update the interaction.
+4. delete: it is used to delete the interaction.
+
+
+path params:
+path params are dynamic segments which is passed inside the url path to identifu a specific resource for any purpose like updating it.
+
+query params:
+query params are basically used to send extra data to server for filter, sort, and search.
+it is basically passed after "?" in the search bar.
+
+
+API Router:
+it is a tool or a class used to structure and modularize your application by grouping related endpoints into separate files.
+
+
+Pydantic:
+pydantic is a famous library of python which is used in fastpi with starlette for data validation, metadata addition and also adding some description for the related variables like description, examples, also if there is any constraints.
+
+BaseModel:
+it is a class in pydantic module which is used to define the schema of the user input.
+
+
+Field validator:
+it is a type of validator which is used to add custom validation logic for a specific field in pydantic model.
+
+model validator:
+it is used to validate model like of there is several validation.
+we pass the pydantic model class as a cls in this model.
+
+computed fields:
+computed fields are the fields that from given fields if we want to compute any field.
+
+
+nested model:
+model inside a model.
