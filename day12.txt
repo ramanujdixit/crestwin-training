@@ -1,0 +1,53 @@
+Request Body:
+When we send data to our API its been sent through request body by client.
+
+Response Body:
+When API sends data to client its been sent through response body by API.
+
+
+Success Codes:
+it tells client the output of their request.
+different types of status code:
+1. 2xx- Success : 200-OK, 201-CREATED, 202-ACCEPTED, 204- NO BODY
+2. 3xx- Redirection: 307- TEMPORARY REDIRECT, 308-PERMANENT REDIRECT
+3. 4xx- Client Error: 400- BAD REQUEST, 401-UNAUTHORIZED, 403-NO PERMISSION(FORBIDDEN), 404- NOT FOUND, 405- WRONG HTTP METHOD, 422-UNPROCESSABLE ENTITY
+4. 5xx- Server Error: 500- INTERNAL SERVER ERROR, 503-SERVICE UNAVAILABLE.
+
+HTTPException:
+It is a way to tell user or to notify user about an error that is using your API.
+-raise keyword is used 
+ex:
+raise HTTPException(status_code=4xx, detail='not found')
+
+
+Dependency Injection:
+if there is some dependency in all the endpoints, like same logic of creating database, permissions, authentication so we create a function or dependency and inject in all the required endpoints through Depends().
+
+OpenAPI:
+it is a standard format that describes your API like:
+-endpoints
+-methods
+-Request Body
+-response format
+
+/docs:
+it gives us an automated swagger ui to manually test our api's endpoints, we dont have to install any plugins ot any dependencies its in built in fastapi.
+
+/redoc:
+automatically creates a clean API documentation, also we can understand endpoints, methods, schemas, params etc.
+
+Postman:
+Postman is a:
+-Api development and testing tool
+-used to send HTTP requests and inspect responses.
+-helps to test APi without frontend.
+
+Collections:
+Organized groups of saved API requests.
+-GET notes
+-CREATE notes
+-UPDATE notes
+-DELETE notes
+
+Manual Endpoint Testing:
+means sending requests manually to verify an API works correctly.
