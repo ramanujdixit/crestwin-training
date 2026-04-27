@@ -1,0 +1,33 @@
+JWT Authentication:
+it is stateless security mechanism used to verify users identities and authorize access to protected API endpoints.
+
+Password Hashing:
+we cannot store passwords as a plain text passwords as given by the users, so we hash it using passlib library using cryptocontext and hashing is one way function so if we have stored hashed passwords then we cannot reverse them back to plain password this ensures security.
+
+Hashing vs Encryption:
+Hashing is one way function and cannot be reversed, where as encryption is two way method which can be reversed using a key that  organization or a admin person have.
+
+access tokens:
+a short lived credential 15-30 min sent with every request to access protected resources.
+
+refresh tokens:
+a long lived credential (7 days) use to access new token once the original one expired.
+
+
+OAUTH2ASSWORDBEARER:
+the token generated once user logged in successfully will now passed with for every protected endpoints and to extract this token we use OAUTH2PASSWORDBEARER.
+-it does not verify user.
+- no permission check.
+-no decode JWT.
+
+it is only for token retrieval.
+
+
+RBAC(role based access control):
+it is a security model that authorizes end-user, lke if token is verified so now what?, so there are some access control based on the role.
+
+components of rbac:
+-users
+-roles
+-permission
+-role assignment
