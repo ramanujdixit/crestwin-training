@@ -1,0 +1,55 @@
+after JWT generated it is not stored in database and this is because we dont compare token, we just extract token using decode function we pass token secret key and algorithm it extracts token and we get the payload, payload contains user info like username , id etc this is where we compare this info from our database that user exists or not.
+
+Middleware:
+Middleware is code that runs between the client request and your routes handler and also give response back to client.
+it is used for:
+- logging requests
+- measuring request time
+- CORS handling
+- Rate limiting
+
+Middleware is not injected in the endpoints if they are created or added once to the fastapi app, and then it automatically applies to all the api endpoints.
+
+
+Custom middleware:
+middleware we have created for our own logic.
+
+it will have call_next():
+it is the function we use to send the request to actual endpoint and gets the response back.
+
+Request time middleware:
+it measures how much time an api request takes to be processed and return a response, this lets us know which api is taking how much time and if the time is to long then the wait will also be long so we can do following operations:
+- Optimization
+- Performance monitoring
+- Debugging
+- Product traffic
+
+
+class based middleware:
+it is a middleware written using a class like (BaseHTTPMiddleware) instead of a function.
+
+
+Logging Middleware:
+Logging middleware is like a log book for api events like recording each request and response for monitoring and debugging purposes, they are not stored in any file, they are shown in terminal while executing a api endpoint.
+
+common logging middleware contains:
+- request detail like endpoints, methods
+- response detail like status codes
+- user related like id, email etc
+- errors
+
+Exception Handlers:
+handling errors gracefully and responding to the client in a mannered way.
+there are two ways to do this:
+-HTTPExeption: it is used to raise a built in api errors, we use to give status code with the detail message what is the issue.
+-JSONResponse: it is used to raise a custom user made error, here also we give status code and content for message for mentioning the issue.
+
+
+BackgroundTasks:
+they are used for secondary non=critical tasks such as welcome mail, or audit logging, so these response do not delay the main API response.
+
+- email:
+for example i have created an endpoint for signup if user is not in the databse then he has to register himself to use protected endpoints now when the user have filled details of sign up page then well send a welcome mail to the user without delaying the api response like user registered successfully.
+
+-audit log:
+when a user performs some task, any event like creating any task, deleting any task, updating task so we store all the logging in the log book for debugging task.
