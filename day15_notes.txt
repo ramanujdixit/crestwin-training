@@ -1,0 +1,29 @@
+File Uploads:
+we can upload files on our API using fastapi using UplaodFile(), and also we can add validation on it like:
+- Type of file: jpeg, png
+- Size of file: file must be under 1MB
+
+Lifespan Context Manager:
+it handles startup(initialization) and shutdown(cleanup) logic such as database connections, ml model loading or cache setup.
+- it is done using @aynccontextmanager
+- yield: code before yield runs at startup, code after yield runs at shutdown.
+- previously we handle this using @app.on_event for startup and shutdown separately but after 2023 we have a context manager.
+
+DB pool init on startup:
+on startup of application lifecycle, we create and initialize a database connection pool and store it so the applications endpoint can reuse those connections instead of opening a new database connection for every request.:
+- app's runtime request borrow connections from the pool and returns them after use.
+- then on shutdown of lifecycle, we close and clean up the pool properly.
+
+Websockets:
+- websocket provides a persistent bidirectional communication between client and server.
+- unlike http request-response, connection stays open.
+they are used for:
+- chat applications
+- notifications
+- live dashboard
+- real time tracking
+
+core methods websockets:
+- accept(): accepts handshake
+- receive_text(): receive client message
+- send_text(): send response back to client.
