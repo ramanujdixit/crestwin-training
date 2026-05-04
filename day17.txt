@@ -1,0 +1,37 @@
+PostgreSQL: 
+is a powerful, open-source object-relational database management system (ORDBMS) known for reliability, robustness, and performance.
+
+psql:
+command line tool to interact with PostgreSQL.
+
+commands:
+- \l: list database
+- \c dbname: connect database
+- \dt: list tables
+- \d table: describe table
+- \q: quit
+
+DDL(data definition language):
+used to manage structure:
+- create, -alter, -drop
+
+DML(data manipulation language):
+used to manage data:
+-select, -insert, -update, -delete
+
+JOINS:
+used to combine multiple tables:
+-inner join:
+keeps only the matching rows
+-left join:
+keeps all records if any row is empty it keeps with the null value.
+
+
+GROUP BY:
+group rows for aggregation.
+
+
+Indexes in Database:
+specialized data structures that improve data retrieval speed by providing pointers to physical data, avoiding slow and full table scans.
+
+
