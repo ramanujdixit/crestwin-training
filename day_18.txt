@@ -1,0 +1,64 @@
+Normalization:
+it is the process of organizing data to minimize redundancy and prevent data anamolies.
+
+types of normalization:
+1. 1NF:
+each row will have single atomic value.
+
+2. 2NF:
+it removes partial dependency.
+
+3. 3NF:
+it eliminates transitive dependency.
+
+Benefits:
+-elimination of data redundancy.
+-ensuring data consistency.
+-improves database design.
+
+
+Database Clustering:
+a database cluster is basically a number of database managed together by a single server.
+
+comparison:
+inside db : normalization- avoids duplication
+across db : clustering - promotes safety and speed.
+
+ORM(Object relational mapper):
+it provides a high level abstraction upon a relational database that allows developer to write python code instead of sql to perform CRUD operations in their database.
+
+SQLAlchemy is a most popular and powerful ORM 
+also it provides SQL toolkit in which we can even use low level sql commands.
+
+
+Declarative Base:
+it is used to define a Base or we can say tables.
+
+Session:
+used to interact with database.
+
+db:Session=Depends(get_db):
+- db.add()- stage object
+- db.commit() - save to db
+- db.refresh() - get updated data
+- db.query() - fetch data
+
+
+Alembic:
+it is a lightweight python library or we can say it is a tool for managing database schema changes safely and in a version controlled way.
+
+we use alembic to:
+-add/remove column
+- create/drop column
+- modify schema
+
+
+steps:
+- alembic init alembic:
+creates configuration files + migration folder.
+- important configuration required in env.py file.
+- alembic revision --autogenerate -m "message":
+this generates migration
+- apply changes: alembic upgrade head
+- for rollback:
+alembic downgrade -1

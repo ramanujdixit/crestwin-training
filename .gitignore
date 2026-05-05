@@ -1,0 +1,8 @@
+venv/
+api_venv/
+__pycache__/
+*.pyc
+.env
+*.db
+alembic/__pycache__/
+.vscode/ 
