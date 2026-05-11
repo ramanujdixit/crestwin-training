@@ -1,0 +1,79 @@
+Medallion Architecture:
+it is a layered data engineering architecture commonly used in databricks lakehouse systems. it has three distinct layers bronze , silver and gold layers to improve data quality and maintainability.
+The Bronze layer stores raw ingested data exactly as received from source systems and acts as the source of truth.
+
+The Silver layer contains cleaned, validated, deduplicated, and standardized data after applying business rules and data quality checks.
+
+The Gold layer contains curated business-ready datasets optimized for analytics, dashboards, reporting, and machine learning use cases.
+
+For example, in an e-commerce platform, raw order and payment data may land in Bronze, cleaned transactional data moves into Silver, and aggregated KPIs like revenue by city or payment type are created in Gold.
+
+Medallion Architecture helps separate raw, cleaned, and business-ready data into different layers, improving data governance, scalability, debugging, and maintainability.
+
+
+Partitioning:
+it is the process of dividing huge datasets into smaller logical chunks so they can be processed independently and in parallel across distributed systems.
+
+It improves:
+
+-scalability
+-query performance
+-distributed execution efficiency
+
+
+ETL vs ELT:
+ETL stands for Extract, Transform, and Load, where data is transformed before loading into the warehouse.
+
+ELT stands for Extract, Load, and Transform, where raw data is first loaded into scalable cloud platforms and transformed afterward.
+
+Modern cloud systems prefer ELT because platforms like Databricks and BigQuery provide scalable distributed compute for large-scale transformations.
+
+
+
+CDC:
+CDC stands for Change Data Capture. It captures only incremental changes such as INSERT, UPDATE, and DELETE operations instead of reprocessing entire datasets repeatedly.
+
+
+OLTP vs OLAP:
+OLTP systems handle day-to-day transactional operations such as orders, payments, and inventory updates.
+
+OLAP systems handle analytical workloads such as dashboards, KPIs, aggregations, and reporting.
+
+OLTP systems are usually normalized and optimized for fast writes, while OLAP systems are denormalized and optimized for analytical querying.
+
+
+Star Schema Vs Snowflake Schema:
+Star Schema contains a central fact table directly connected to denormalized dimension tables.
+
+Snowflake Schema further normalizes dimension tables into smaller related tables.
+
+Star Schema is simpler and faster for analytics, while Snowflake reduces redundancy but increases joins and query complexity.
+
+
+Fact Tables Vs Dimension Table:
+Fact tables store measurable business metrics such as sales amount, quantity, or revenue.
+
+Dimension tables store descriptive business context such as customer details, product information, dates, or regions.
+
+
+RAG:
+RAG stands for Retrieval-Augmented Generation.
+
+It combines retrieval systems with LLMs by first retrieving relevant contextual data from external knowledge sources and then providing that context to the language model for more accurate responses.
+
+
+Vector Database:
+Vector databases store embeddings for semantic similarity search.
+
+They enable efficient retrieval of contextually similar information in RAG systems, improving AI response relevance.
+
+
+MLFlow:
+MLflow is an open-source platform used for managing the machine learning lifecycle including:
+
+experiment tracking
+model versioning
+deployment
+reproducibility
+model management
+
